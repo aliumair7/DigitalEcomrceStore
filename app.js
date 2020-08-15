@@ -1,0 +1,75 @@
+var createError = require('http-errors');
+var express = require('express');
+var path = require('path');
+var cookieParser = require('cookie-parser');
+var logger = require('morgan');
+var mongoose=require('mongoose');
+var indexRouter = require('./routes/index');
+var usersRouter = require('./routes/users');
+var cartRouter=require('./routes/carts')
+var productsRouter=require('./routes/products');
+var ordersRouter=require('./routes/orders')
+
+
+var config=require('config')
+var cors = require('cors')
+
+var app = express();
+
+// Serve static files from the React frontend app
+app.use(express.static(path.join(__dirname, 'myshop/build')))
+const corsConfig = {
+  origin: true,
+  credentials: true,
+};
+
+app.use(cors(corsConfig))
+app.options('*', cors(corsConfig));
+
+
+
+
+// view engine setup
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'jade');
+
+app.use(logger('dev'));
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(cookieParser());
+app.use(express.static(path.join(__dirname, 'public')));
+
+app.use('/', indexRouter);
+app.use('/users', usersRouter);
+app.use('/products',productsRouter);
+app.use('/carts',cartRouter)
+app.use('/orders',ordersRouter)
+
+// Anything that doesn't match the above, send back the index.html file
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname + '/myshop/build/index.html'))
+})
+
+// catch 404 and forward to error handler
+app.use(function(req, res, next) {
+  next(createError(404));
+});
+
+// error handler
+app.use(function(err, req, res, next) {
+  // set locals, only providing error in development
+  res.locals.message = err.message;
+  res.locals.error = req.app.get('env') === 'development' ? err : {};
+
+  // render the error page
+  res.status(err.status || 500);
+  res.render('error');
+});
+
+
+mongoose.connect(config.get('db'),{ useUnifiedTopology: true,useNewUrlParser: true  }).then(res=>{
+  console.log("connected to mogodb .....")
+}).catch(e=>(console.log(e)))
+
+
+module.exports = app;

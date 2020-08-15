@@ -1,0 +1,8 @@
+
+
+{
+ 
+    "db" :"mongodb+srv://admin:12345@cluster0.k1kgl.mongodb.net/test?retryWrites=true&w=majority" ,
+    "jwtPrivateKey":"someprivatekey",
+    "stripekey":"sk_test_51H2YSHBx7QxnH8iBUdmg3PsmD3yWR0AzJy4aa7tqOzzhfcAIYt2BHElWPTOZ8jRNLulOv2LcxrHqtyDAVb5Wgmr2002tIoFIKp"
+}
