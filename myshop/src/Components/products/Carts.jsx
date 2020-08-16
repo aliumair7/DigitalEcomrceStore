@@ -14,7 +14,7 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import Purchase from './purchase'
-import StickyFooter from "../footer";
+
 import userService from "../../Service/userService";
 import { toast } from "react-toastify";
 
@@ -215,7 +215,7 @@ const Carts = (props) => {
 
 </>  )}
         
-        <StickyFooter/>
+      
     </div>
     );
 }

@@ -7,7 +7,7 @@ import AddIcon from '@material-ui/icons/Add';
 import productService from "../../Service/ProductService";
 import userService from "../../Service/userService";
 import Pagination from '@material-ui/lab/Pagination';
-import StickyFooter from "../footer";
+
 
 
 const useStyles = makeStyles((theme) => ({
@@ -99,7 +99,7 @@ Record Per Page: {""}
     
 
 </Grid>
-<StickyFooter/>    
+
     </div>
     
     );

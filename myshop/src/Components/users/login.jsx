@@ -15,7 +15,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import userService from '../../Service/userService';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import StickyFooter from '../footer'
+
 
 
 
@@ -153,7 +153,7 @@ const Login=()=> {
         
         </div>
        
-        <StickyFooter/>
+      
       </Grid>
      
     </Grid>

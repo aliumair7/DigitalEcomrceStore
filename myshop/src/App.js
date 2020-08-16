@@ -18,6 +18,7 @@ import ResetPassword from './Components/users/reset';
 import Newpassword from './Components/users/newpassord';
 import { Grid } from '@material-ui/core';
 import UpperFooter from './Components/upperfooter';
+import StickyFooter from './Components/footer';
 
 function App() {
   return (
@@ -54,6 +55,7 @@ function App() {
       
 
       </Switch>
+      <StickyFooter />
       </div>
     </Router>
     

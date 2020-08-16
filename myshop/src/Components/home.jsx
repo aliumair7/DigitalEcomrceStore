@@ -26,7 +26,6 @@ import Chart from './products/charts';
 import List from '@material-ui/core/List';
 import { mainListItems, secondaryListItems } from './products/listitems';
 import DashboardIcon from '@material-ui/icons/Dashboard';
-import StickyFooter from './footer';
 import PeopleIcon from '@material-ui/icons/People';
 import AssignmentIcon from '@material-ui/icons/Assignment';
 
@@ -258,7 +257,7 @@ const Home=() => {
       
           </Box>
         </Container>
-        <StickyFooter/>
+        
       </main>
     
     </div> 

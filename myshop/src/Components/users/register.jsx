@@ -14,7 +14,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import userService from '../../Service/userService';
 import { toast } from "react-toastify";
-import StickyFooter from '../footer';
+
 
 
 
@@ -161,7 +161,7 @@ const Register=(props) =>{
         </form>
       </div>
       <Box mt={5}>
-      <StickyFooter/>
+    
       </Box>
      
     </Container>
