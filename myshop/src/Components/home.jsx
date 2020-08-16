@@ -14,7 +14,7 @@ import IconButton from '@material-ui/core/IconButton';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
-import Link from '@material-ui/core/Link';
+import Link from 'react-router-dom'
 import FolderIcon from '@material-ui/icons/Folder';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
@@ -166,7 +166,7 @@ const Home=() => {
           </IconButton>
         </div>
         <Divider />
-        <Link href="/">
+        <Link to="/">
         <ListItem button>
 
 
@@ -178,7 +178,7 @@ const Home=() => {
       
       </ListItem>
       </Link>
-      <Link href="/product">
+      <Link to="/product">
       <ListItem button>
       <ListItemIcon>
         <FolderIcon />
@@ -187,7 +187,7 @@ const Home=() => {
     </ListItem>
     </Link>
       
-      <Link href="/db-cart">
+      <Link to="/db-cart">
       <ListItem button>
       <ListItemIcon>
         <ShoppingCartIcon />
@@ -196,7 +196,7 @@ const Home=() => {
     </ListItem>
     </Link>
 
-     <Link href="/customers">  
+     <Link to="/customers">  
     <ListItem button>
       <ListItemIcon>
         <PeopleIcon />
@@ -205,7 +205,7 @@ const Home=() => {
     </ListItem>
     </Link>  
     
-    <Link href="/ordersdata">
+    <Link to="/ordersdata">
     <ListItem button>
       <ListItemIcon>
         <ShoppingCartIcon />
@@ -216,7 +216,7 @@ const Home=() => {
         
         <Divider />
         <List>{secondaryListItems}</List>
-        <Link href="/lastmonth">
+        <Link to="/lastmonth">
         <ListItem button>
       <ListItemIcon>
         <AssignmentIcon />
