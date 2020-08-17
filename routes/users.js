@@ -90,7 +90,7 @@ crypto.randomBytes(32,(err,buffer)=>{
          from:"digitalecomrcestore@gmail.com",
          subject:"password reset",
          html:`<p>Your request for password reset</p>
-                <h5>click on the <a  href="https://digitalecomrcestore.herokuapp.com/reset/${token}">Link</a> to reset passsowrd</h5>`
+                <h5>click on the <a  href="http://localhost:3000/reset/${token}">Link</a> to reset passsowrd</h5>`
          
 
        })
